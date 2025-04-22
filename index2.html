@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Charadas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="container mx-auto mt-4 px-32 py-4 bg-white shadow-md rounded">
+        <h1 class="mb-4 text-3xl font-bold text-center">(▀̿Ĺ̯▀̿ ̿) Painel Administrativo de Charadas</h1>
+
+        <form id="create-form" class="mb-4 p-4 border rounded bg-gray-200">
+            <h2 class="text-lg font-semibold mb-4">Adicionar Nova Charada</h2>
+            <div class="mb-3">
+                <label for="create-name" class="block text-sm font-medium text-gray-700">Pergunta:</label>
+                <input type="text" id="create-name" class="mt-1 p-2 border rounded w-full" required placeholder="Digite a pergunta da charada">
+            </div>
+            <div class="mb-3">
+                <label for="create-description" class="block text-sm font-medium text-gray-700">Resposta:</label>
+                <input type="text" id="create-description" class="mt-1 p-2 border rounded w-full" required placeholder="Digite a resposta">
+            </div>
+            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Adicionar Charada</button>
+        </form>
+
+        <form id="update-form" class="mb-4 p-4 border rounded bg-gray-200 hidden">
+            <h2 class="text-lg font-semibold mb-4">Editar Charada</h2>
+            <input type="hidden" id="update-id">
+            
+            <div class="mb-3">
+                <label for="update-name" class="block text-sm font-medium text-gray-700">Pergunta:</label>
+                <input type="text" id="update-name" class="mt-1 p-2 border rounded w-full" required>
+            </div>
+            <div class="mb-3">
+                <label for="update-description" class="block text-sm font-medium text-gray-700">Resposta:</label>
+                <input type="text" id="update-description" class="mt-1 p-2 border rounded w-full" required>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Salvar Alterações</button>
+            <button type="button" id="cancel-update" class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded ml-2">Cancelar Edição</button>
+        </form>
+
+        <hr>
+
+        <h2 class="text-lg font-semibold mb-4">Charadas Cadastradas</h2>
+        <div id="item-list">
+            <p>Carregando charadas...</p>
+        </div>
+
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
